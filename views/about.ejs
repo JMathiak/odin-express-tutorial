@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>About ME</title>
+</head>
+
+<body>
+    <%- include('navbar', {links: links}) %>
+        <h1>About Us</h1>
+        <ul>
+            <% for(let i=0; i < userInfo.length; i++) {%>
+                <li>
+                    <span>
+                        <%= userInfo[i].name %>,
+                            <%= userInfo[i].job %>,
+                                <%= userInfo[i].level %>
+
+                    </span>
+                </li>
+
+                <%} %>
+        </ul>
+        <footer>
+            <%- include('footer') %>
+        </footer>
+</body>
+
+</html>
