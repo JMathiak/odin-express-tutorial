@@ -2,6 +2,7 @@ const express = require("express");
 const userRouter = require('./routes/userRoutes')
 const path = require("node:path")   
 const app = express();
+const { body, validationResult } = require("express-validator");
 const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath))
 const links = [
